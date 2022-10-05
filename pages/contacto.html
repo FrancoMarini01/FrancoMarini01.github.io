@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+    <title>PETIT MERCADO</title>
+</head>
+<body>
+    <header> 
+        <nav>
+            <div class="titulo">
+                <img src="../img/logo PETIT.png" alt="logo" >
+                <h1><span id="petit">Petit</span><span id="mercado"> mercado</span></h1>
+            </div>
+            
+            <div class="inicioSesion"> 
+                <form name="login" action="index_submit" method="get" accept-charset="utf-8">
+                    <ul>
+                        <li><label for="correo">Correo electrónico</label>
+                            <input type="correo" name="user" placeholder="Correo" required></li>
+                        <li><label for="correo">Contraseña</label>
+                            <input type="password" name="password" placeholder="Clave" required></li>
+                        <li><input type="submit" value="Ingresar" id="button"></li>
+                    </ul>
+                </form>
+            </div>
+
+            <div class="barraNavegacion">  
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/promociones.html">Promociones</a></li>
+                    <li><a href="../pages/productos.html">Productos</a></li>
+                    <li><a href="../pages/acercade.html">Acerca de Nosotros<a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>   
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="formularioTitulo">
+            <h2>FORMULARIO DE CONTACTO</h2>
+        </section>
+
+        <section class="formulario">
+            <form action="" method="" enctype="">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre">
+                </div>
+
+                <div>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido">
+                </div>
+
+                <div>
+                    <label for="correo">Correo</label>
+                    <input type="email" name="correo">
+                </div>
+
+                <div>
+                    <label for="contrasenia">Clave</label>
+                    <input type="password" name="contrasenia">
+                </div>
+
+                <div>
+                    <h3>SELECCIONE SU GENERO</h3>
+                    <label for="femenino">FEMENINO</label>
+                    <input type="radio" name="femenino">
+                    <label for="masculino">MASCULINO</label>
+                    <input type="radio" name="masculino">
+                </div>
+
+                <div>
+                    <h3 class="tituloVerde">¿DE QUE PARTE DEL PAIS NOS ESCRIBE?</h3>
+                    <select name="select"> provincia
+                        <option aria-placeholder="">Provinicia-</option>
+                        <option value="">Buenos Aires</option>
+                        <option value="">Cordoba</option>
+                        <option value="">Mendoza</option>
+                        <option value="">La Pampa</option>
+                        <option value="">Corrientes</option>
+                    </select>
+                
+                </div>
+                <div>
+                    <h3>Dejanos tu comentario!</h3>
+                    <textarea name="comentario" id="comentario" cols="60" rows="10"></textarea>
+                </div>
+
+                <div class="formularioButton">
+                    <input type="submit" value="Enviar formulario">
+                    <input type="reset" value="Eliminar">
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h2 class="PieDePagina">PODES ENCONTRARNOS EN</h2>
+            <a href="https://www.facebook.com/" target="_blank"><img src="../img/footerFace.png" alt="facebook" class="logoFb"></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="../img/footerWhatsapp.png" alt="whatsapp" class="logoWpp"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../img/footerInstagram.png" alt="instagram" class="logoIg"></a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12528.991073226147!2d-57.8333168!3d-38.273749!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13ac3b2cb96781e3!2sPetit%20Mercado!5e0!3m2!1ses-419!2sar!4v1663880496952!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+</body>
+</html>
