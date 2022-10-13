@@ -20,7 +20,7 @@ header{
     background-color: white;
     width: 100%;
 
-}
+} 
 .titulo{
     width: 100%;
     display: flex;
@@ -111,7 +111,6 @@ header{
     border-style: hidden;
     justify-content: center;
 }
-
 .buscador{
     display: flex;
     justify-content:center ;
