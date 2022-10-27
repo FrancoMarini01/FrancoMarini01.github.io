@@ -1,0 +1,97 @@
+#petit {
+    font-family: 'Great vibes', cursive;
+    color: $colorPrincipal;
+}
+
+#mercado {
+    color: $colorSecundario;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+
+    .titulo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+            h1 {
+                color: $colorSecundario;
+                font-family: 'Abel', sans-serif;
+                font-size: 100px;
+                margin: 25px;
+            }
+            img {
+                width: 200px;
+                height: 180px;
+                margin: 25px;
+            }
+    }
+
+    .inicioSesion {
+        form {
+            ul {
+                list-style: none;
+                text-decoration: none;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: bolder;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+
+                li {
+                    label {
+                        display: inline-block;
+                }   
+            }
+        }
+    }
+
+    #button {
+        margin-top: 18px;
+        padding: 2px;
+        font-size: 20px;
+        line-height: 0.7;
+        letter-spacing: 0.2px;
+        background-color: white;
+        color: black;
+        border: 1px solid;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        height: 30px;
+        line-height: 15px;
+        float: right;
+        margin-bottom: 5%;
+    }
+
+    .barraNavegacion{
+        ul {
+        list-style: none;
+        list-style-type: none;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: bolder;
+        display: flex;
+        justify-content: space-evenly;
+        padding-block: 15px;
+        padding-top: 35px;
+        background-color: $colorPrincipal;
+        border-style: solid;
+        border-color: black;
+        }
+            li{
+                a{
+                    text-decoration: none;
+                    color: black;
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+            }
+    }
+}
