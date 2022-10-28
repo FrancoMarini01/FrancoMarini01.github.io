@@ -258,7 +258,7 @@ footer {
   padding-bottom: 50px;
   display: flex;
   justify-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   border-bottom: black;
   border-bottom-width: 3%;
   border-bottom-style: double;
@@ -286,6 +286,10 @@ footer {
   justify-content: space-evenly;
   background-color: #f22237;
   color: white; }
+  .fondoRojoTitulo h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .fondoRojoTitulo img {
     width: 100px;
     height: 100px;
@@ -300,9 +304,9 @@ footer {
 .ofertasGaleria {
   width: 100%;
   height: 50%;
-  display: flex;
+  display: grid;
   justify-items: center;
-  justify-content: space-evenly; }
+  justify-content: center; }
   .ofertasGaleria img {
     width: 100%;
     padding-top: 3%;
@@ -391,6 +395,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 1fr 1fr 0,5fr;
+  grid-template-areas: "img img" "img img" "img img" "h2 h2";
   justify-content: stretch;
   align-items: stretch;
   margin: 15px; }
@@ -414,12 +419,22 @@ footer {
     border: 3px;
     border-color: black;
     border-style: solid;
+    border-left: none;
+    border-right: none;
     justify-content: space-evenly;
+    align-items: center;
     background-color: #f22237;
     margin: 2% 0% 2% 0%; }
 
 .galeria7 {
   grid-column-start: 1;
+  grid-column-end: 2;
+  justify-content: center;
+  align-content: center;
+  display: flex; }
+
+.galeria8 {
+  grid-column-start: 2;
   grid-column-end: 3;
   justify-content: center;
   align-content: center;
@@ -462,11 +477,13 @@ footer {
 
 /* -----MEDIA QUERIES------ */
 @media screen and (max-width: 1210px) {
-  .titulo h1 {
-    font-size: 80px; }
-  .inicioSesion form ul {
+  header .titulo {
+    width: 80%; }
+    header .titulo h1 {
+      font-size: 80px; }
+  header .inicioSesion form ul {
     font-size: 20px; }
-  .barraNavegacion ul {
+  header .barraNavegacion ul {
     font-size: 20px; }
   .bienvenidos {
     font-size: 60px; }
@@ -475,6 +492,15 @@ footer {
     margin: 50px; }
   .delivery p {
     font-size: 40px; }
+  .fondoRojoTitulo {
+    font-size: 65px;
+    padding: 12px; }
+    .fondoRojoTitulo img {
+      width: 80px;
+      height: 80px; }
+  .descubriTitulo h2 {
+    font-size: 65px;
+    padding: 12px; }
   footer h2 {
     font-size: 25px;
     font-style: italic;
@@ -489,17 +515,17 @@ footer {
     margin: 5px; } }
 
 @media screen and (max-width: 880px) {
-  .titulo img {
+  header .titulo img {
     width: 100px;
     height: 90px;
     margin: 10px; }
-  .titulo h1 {
+  header .titulo h1 {
     font-size: 40px; }
-  .inicioSesion form ul {
+  header .inicioSesion form ul {
     font-size: 10px; }
-  .barraNavegacion ul {
+  header .barraNavegacion ul {
     font-size: 10px; }
-  #button {
+  header #button {
     display: none; }
   .bienvenidos {
     font-size: 30px; }
@@ -524,6 +550,20 @@ footer {
     background-color: black; }
   .delivery img {
     display: none; }
+  .fondoRojoTitulo {
+    font-size: 50px;
+    padding: 9px; }
+    .fondoRojoTitulo img {
+      display: none; }
+  .descubriTitulo h2 {
+    font-size: 50px;
+    padding: 9px; }
+  .redes h2 {
+    font-size: 50px;
+    padding: 9px; }
+  .galeria h2 {
+    font-size: 40px;
+    padding: 9px; }
   footer h2 {
     font-size: 20px;
     font-style: italic;
@@ -559,6 +599,20 @@ footer {
     font-size: 12px; }
   .delivery {
     display: none; }
+  .fondoRojoTitulo {
+    font-size: 30px;
+    padding: 5px; }
+    .fondoRojoTitulo img {
+      display: none; }
+  .descubriTitulo h2 {
+    font-size: 30px;
+    padding: 5px; }
+  .redes h2 {
+    font-size: 30px;
+    padding: 5px; }
+  .galeria h2 {
+    font-size: 25px;
+    padding: 5px; }
   footer h2 {
     font-size: 18px;
     font-style: italic;

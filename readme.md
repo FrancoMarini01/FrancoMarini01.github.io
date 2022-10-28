@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Franco!</h1>
 <h3 align="center">A passionate frontend developer from Miramar, Bs.As, Argentina.</h3>
 
-- 🔭 I’m currently working on [Petit Mercado](https://drive.google.com/drive/folders/12leUDH4hOh9w7EcoxTmjxn4G7KtAu9ce?usp=sharing)
+- 🔭 I’m currently working on [Petit Mercado](https://francomarini01.github.io/)
 
 - 🌱 I’m currently learning **Full Stack Web Developer**
 

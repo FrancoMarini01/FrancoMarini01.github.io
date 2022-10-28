@@ -7,7 +7,7 @@
     padding-bottom: 50px;
     display: flex;
     justify-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     border-bottom: black;
     border-bottom-width: 3%;
     border-bottom-style: double;
@@ -35,6 +35,11 @@
     justify-content: space-evenly;
     background-color: $colorPrincipal;
     color: white;
+        h3{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+        }
         img{
             width: 100px;
             height: 100px;
@@ -51,9 +56,9 @@
 .ofertasGaleria{
     width: 100%;
     height: 50%;
-    display: flex;
+    display: grid;
     justify-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
         img{
             width: 100%;
             padding-top: 3%;

@@ -1,11 +1,15 @@
 /* -----MEDIA QUERIES------ */
 
+// --------------MEDIA 1210px
 
 @media screen and (max-width: 1210px) {
+
+header{
 	.titulo {
-		h1 {
-			font-size: 80px;
-		}
+        width: 80%;
+		    h1 {
+			    font-size: 80px;
+		    }
 	}
 	.inicioSesion {
 		form {
@@ -19,6 +23,7 @@
 			font-size: 20px;
 		}
 	}
+}
 	.bienvenidos {
 		font-size: 60px;
 	}
@@ -33,6 +38,25 @@
 			font-size: 40px;
 		}
 	}
+
+
+	.fondoRojoTitulo{
+		font-size: 65px;
+		padding: 12px;
+			img{
+				width: 80px;
+				height: 80px;
+			}
+	}
+
+	.descubriTitulo{
+		h2{
+			font-size: 65px;
+			padding: 12px;
+		}
+	}
+
+
 	footer {
 		h2 {
 			font-size: 25px;
@@ -52,7 +76,11 @@
 	}
 }
 
+
+// --------------MEDIA 880px
+
 @media screen and (max-width: 880px) {
+header{
 	.titulo {
 		img {
 			width: 100px;
@@ -78,6 +106,8 @@
 	#button {
 		display: none;
 	}
+}
+	
 	.bienvenidos {
 		font-size: 30px;
 	}
@@ -113,23 +143,53 @@
 			display: none;
 		}
 	}
-	footer {
-		h2 {
-			font-size: 20px;
-			font-style: italic;
-			border: hidden;
-			padding: 5px;
-		}
-		img {
-			width: 40px;
-			height: 40px;
-		}
-		iframe {
-			width: 100px;
-			height: 100px;
-			margin: 5px;
+
+	.fondoRojoTitulo{
+		font-size: 50px;
+		padding: 9px;
+			img{
+				display: none;
+			}
+	}
+
+	.descubriTitulo{
+		h2{
+			font-size: 50px;
+			padding: 9px;
 		}
 	}
+
+	.redes{
+		h2{
+			font-size: 50px;
+			padding: 9px;
+		}
+	}
+
+	.galeria{
+		h2{
+			font-size: 40px;
+			padding: 9px;
+		}
+	}
+
+footer {
+	h2 {
+		font-size: 20px;
+		font-style: italic;
+		border: hidden;
+		padding: 5px;
+	}
+	img {
+		width: 40px;
+		height: 40px;
+	}
+	iframe {
+		width: 100px;
+		height: 100px;
+		margin: 5px;
+	}
+}
 	.sucursalesUbicacion {
 		display: none;
 	}
@@ -147,6 +207,8 @@
 		font-size: 15px;
 	}
 }
+
+// ----------------MEDIA 485px
 
 @media screen and (max-width: 485px) {
 	#ofertaSemanal {
@@ -167,6 +229,38 @@
 	.delivery {
 		display: none;
 	}
+
+	.fondoRojoTitulo{
+		font-size: 30px;
+		padding: 5px;
+			img{
+				display: none;
+			}
+	}
+
+	.descubriTitulo{
+		h2{
+			font-size: 30px;
+			padding: 5px;
+		}
+	}
+
+	.redes{
+		h2{
+			font-size: 30px;
+			padding: 5px;
+		}
+	}
+
+	.galeria{
+		h2{
+			font-size: 25px;
+			padding: 5px;
+		}
+	}
+
+
+
 	footer {
 		h2 {
 			font-size: 18px;
