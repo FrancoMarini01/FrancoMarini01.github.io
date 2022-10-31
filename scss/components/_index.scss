@@ -7,15 +7,13 @@
 }
 .bienvenidos{
     width: 100%;
-    display: flex;
     padding: 15px;
     font-size: 70px;
     border-style: hidden;
-    justify-content: center;
+    @include flex (flex, center, center);
 }
 .buscador{
-    display: flex;
-    justify-content:center ;
+    @include flex (flex, center, center);
     border-bottom: dotted;
     padding-bottom: 30px;
 }

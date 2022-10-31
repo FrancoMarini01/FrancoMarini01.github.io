@@ -3,9 +3,8 @@ footer{
     margin-top: 5px;
     border-top: 5px solid black;
     border-bottom: 5px solid black;
-    display: flex;
+    @include flex (flex, space-evenly, none);
     align-items: center;
-    justify-content: space-evenly;
         h2{
             font-size: 40px;
             font-style: italic;

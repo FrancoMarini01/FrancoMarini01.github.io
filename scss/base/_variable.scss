@@ -3,3 +3,8 @@ $colorSecundario: rgb(0, 155, 0);
 $color1: white;
 $backgroundColor1: black;
 
+@mixin flex ($display, $justify-content, $align-content){
+    display: flex;
+    justify-content: $justify-content;
+    align-content: $align-content;
+}

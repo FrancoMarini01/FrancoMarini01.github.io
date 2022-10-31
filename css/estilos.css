@@ -83,8 +83,9 @@ footer {
   border-top: 5px solid black;
   border-bottom: 5px solid black;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  align-content: none;
+  align-items: center; }
   footer h2 {
     font-size: 40px;
     font-style: italic;
@@ -108,15 +109,17 @@ footer {
 
 .bienvenidos {
   width: 100%;
-  display: flex;
   padding: 15px;
   font-size: 70px;
   border-style: hidden;
-  justify-content: center; }
+  display: flex;
+  justify-content: center;
+  align-content: center; }
 
 .buscador {
   display: flex;
   justify-content: center;
+  align-content: center;
   border-bottom: dotted;
   padding-bottom: 30px; }
 
