@@ -1,5 +1,5 @@
-let admin = (prompt("Coloque 1 si usted es administrador. En su defecto, 2 si usted es cliente"));
-
+let admin = document.getElementById("admin")
+const boton = document.getElementById("btn")
 //  ---------- Cliente ----------
 
 class Cliente{
@@ -12,16 +12,11 @@ class Cliente{
 
 function crearCliente() {
 
-    let nombreCliente = prompt("Cual es su nombre?");
-    let calleCliente = prompt("Cual es su direccion?");
-    let clienteExistente = prompt("Es usted cliente nuevo? Responda si o no");
-    let propClienteExistente;
-        if (clienteExistente == "si"){
-            clienteExistente = true
-        } else{
-            clienteExistente = false
-        }
-    const clienteNuevo = new Cliente(nombreCliente, calleCliente, propClienteExistente);
+    let nombreCliente = document.querySelector("#nombreCliente").value
+    let calleCliente = document.querySelector("#direcCliente").value
+    let clienteExistente = document.querySelector("#nvoCliente").value
+    
+    const clienteNuevo = new Cliente(nombreCliente, calleCliente, clienteExistente);
 
     console.log(clienteNuevo);
     return clienteNuevo;
@@ -40,32 +35,42 @@ let listaProductos = [
     {nombre: "Yerba Playadito", departamento: "Infusiones", precio: "400"},
     {nombre: "Arroz Gallo DC", departamento: "Alimentos", precio: "98"},
 ];
+listaProductos = JSON.parse(localStorage.getItem("productos")) || [];
 
 const agregarProducto = () => {
-    let nombre = prompt("Cual es el producto a ingresar?");
-    let departamento = prompt("A que departamento pertenece?");
-    let precio = parseFloat(prompt("Que precio tiene?"));
+    let nombre = document.getElementById("nombre").value;
+    let departamento = document.getElementById("departamento").value;
+    let precio = parseInt(document.getElementById("precio")).value;
 
     let productoNuevo = new Administrador(nombre, departamento, precio);
 
     listaProductos.push(productoNuevo);
+    localStorage.setItem("productos", listaProductos);
+    localStorage.setItem("productoNvo", productoNuevo);
     return listaProductos;
+
 }
 
 if (admin == 1){
-    (alert(`Ingrese desde la base de datos por favor.`));
+    admin = true;
     agregarProducto();
-    console.log(listaProductos)
+    console.log(listaProductos);
 } else if (admin != 1) {
     crearCliente();
 }
+boton.addEventListener("click", agregarProducto);
+    console.log(listaProductos);
 
 listaProductos.forEach((producto)=> {
     console.log(`${producto.nombre} vale $${producto.precio}`)
 });
 
-// const menorQueCien = listaProductos.filter(p => p.precio <= 100);
-// console.log(menorQueCien);
+const menorQueCien = listaProductos.filter(p => p.precio <= 100);
+    console.log(menorQueCien);
+
+
+
+
 
 
 
