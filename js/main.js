@@ -1,4 +1,4 @@
-let admin = true;
+
 let admin = (prompt("Coloque 1 si usted es administrador. En su defecto, 2 si usted es cliente"));
 
 if (admin == 1){
