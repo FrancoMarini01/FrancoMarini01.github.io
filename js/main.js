@@ -1,3 +1,5 @@
+// -----------Preentrega 1 ------------------
+
 // let admin = (prompt("Coloque 1 si usted es administrador. En su defecto, 2 si usted es cliente"));
 
 // if (admin == 1){
@@ -18,6 +20,9 @@
 //     }
 // }
 
+// ---------------Preentrega 2 -------------------
+
+
 let admin = document.getElementById("admin")
 const boton = document.getElementById("btn")
 //  ---------- Cliente ----------
@@ -32,9 +37,9 @@ class Cliente{
 
 function crearCliente() {
 
-    let nombreCliente = document.querySelector("#nombreCliente").value
-    let calleCliente = document.querySelector("#direcCliente").value
-    let clienteExistente = document.querySelector("#nvoCliente").value
+    let nombreCliente = document.querySelector("#nombreCliente").value;
+    let calleCliente = document.querySelector("#direcCliente").value;
+    let clienteExistente = document.querySelector("#nvoCliente").value;
     
     const clienteNuevo = new Cliente(nombreCliente, calleCliente, clienteExistente);
 
