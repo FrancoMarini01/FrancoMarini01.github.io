@@ -1,24 +1,25 @@
 // -----------Preentrega 1 ------------------
 
-let administrador = (prompt("Coloque 1 si usted es administrador. En su defecto, 2 si usted es cliente"));
+// let administrador = (prompt("Coloque 1 si usted es administrador. En su defecto, 2 si usted es cliente"));
 
-if (administrador == 1){
-    (alert(`Ingrese desde la base de datos por favor.`));
-} else if (administrador != 1){
-    (alert("puede seguir comprando!"));
-}
+// if (administrador == 1){
+//     (alert(`Ingrese desde la base de datos por favor.`));
+// } else if (administrador != 1){
+//     (alert("puede seguir comprando!"));
+// }
 
-let pass = 1234;
-let dato = parseInt(prompt("cual es la clave?"));
-let intentos = 3;
+// let pass = 1234;
+// let dato = parseInt(prompt("cual es la clave?"));
+// let intentos = 3;
 
-while (dato != pass && intentos > 0 ) {
-    intentos--;
-     alert(`la clave es incorrecta, te quedan ${intentos} intentos`);
-   if (intentos != 0) {
-        dato = parseInt(prompt("cual es la clave?"));
-    }
-}
+// while (dato != pass && intentos > 0 ) {
+//     intentos--;
+//      alert(`la clave es incorrecta, te quedan ${intentos} intentos`);
+//    if (intentos != 0) {
+//         dato = parseInt(prompt("cual es la clave?"));
+//     }
+// }
+
 
 // ---------------Preentrega 2 -------------------
 
@@ -47,6 +48,8 @@ function crearCliente() {
     return clienteNuevo;
 }
 
+JSON.parse(localStorage.getItem("cliente")) || localStorage.setItem("cliente", JSON.stringify(cliente));
+
 //      ---- Administrador -----
 class Administrador{
     constructor(nombre, departamento, precio){
@@ -57,8 +60,9 @@ class Administrador{
     }
 }
 let listaProductos = [
-    {nombre: "Yerba Playadito", departamento: "Infusiones", precio: "400"},
-    {nombre: "Arroz Gallo DC", departamento: "Alimentos", precio: "98"},
+    {id: 1, nombre: "Yerba Playadito", departamento: "Infusiones", precio: "400"},
+    {id: 2, nombre: "Arroz Gallo DC", departamento: "Alimentos", precio: "98"},
+    {id: 3, nombre: "Coca Cola 1.5L", departamento: "Gaseosas", precio: "200"},
 ];
 
 const agregarProducto = () => {
@@ -67,8 +71,37 @@ const agregarProducto = () => {
     let precio = parseInt(document.getElementById("precio")).value;
 
     let productoNuevo = new Administrador(nombre, departamento, precio);
-
+    console.log(productoNuevo);
 }
+
+const generarCardsProductos = (productosInicio) => {
+    divProductos.innerHTML = "";
+  
+    productosInicio.forEach((producto) => {
+
+    const { id, nombre, imagen, departamento, precio} = producto
+     
+      let card = document.createElement("div");
+      card.className = "item";
+      card.innerHTML = `            
+        <div class="item">
+            <h4>${nombre}</h4>
+            <img src="${imagen}" class="imgItems">
+            <h5>$${precio}</h5>
+            <input type="button" value="AÑADIR AL CARRITO🛒" class="carritoButton"><a href=""></a>
+        </div>`;
+  
+      divProductos.appendChild(card);
+
+      const btnComprar = document.getElementById(`btn${id}`)
+      btnComprar.addEventListener("click", () => comprarProducto(id))
+    
+    });
+};
+    
+JSON.parse(localStorage.getItem("productos")) || localStorage.setItem("productos", JSON.stringify(productoNuevo));
+
+
 
 if (admin == 1){
     admin = true;
@@ -78,7 +111,7 @@ if (admin == 1){
     crearCliente();
 }
 
-const menorQueCien = listaProductos.filter(p => p.precio <= 100);
+ const menorQueCien = listaProductos.filter(p => p.precio <= 100);
     console.log(menorQueCien);
 
         
